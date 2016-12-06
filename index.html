@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Actividad 6-2</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper #01579b light-blue darken-4">
+            <a href="#!" class="brand-logo "><i class="material-icons">cloud</i>Actividad 6</a>
+            <ul class="right hide-on-med-and-down">
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <form name="formValidate" class="col s12" action="#" method="POST" onreset="resetForm()" onsubmit="return false;">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Introduzca su NIF sin espacios en blancos ni guiones." id="txtNif" type="text">
+                        <span class="badge" id="wrongNif"></span>
+                        <label for="txtNif">NIF</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input placeholder="Introduzca fecha en el siguiente formato DD/MM/AAAA" id="txtDate" type="text">
+                        <span class="badge" id="wrongDate"></span>
+                        <label for="txtDate">Fecha de nacimiento</label>
+                    </div>
+                    <div class="input-field col s8">
+                        <input placeholder=" " id="txtAccess" type="password" readonly>
+                        <span class="badge" id="wrongAccess"></span>
+                        <label for="txtAccess">Clave de acceso</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <a href="#" id='aClean'>Limpiar clave</a>
+                    </div>
+                    <div class="input-field col s12" id="btns">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8">
+                        <label for="rSolicitante">Tipo de solicitante</label>
+                        <p>
+                            <input name="group1" type="radio" id="rProf" />
+                            <label for="rProf">Profesor</label>
+                        </p>
+                        <p>
+                            <input name="group1" type="radio" id="rStudent" />
+                            <label for="rStudent">Estudiante</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8">
+                        <label for="rGenero">Género</label>
+                        <p>
+                            <input name="group2" type="radio" id="rMale" value="masculino" onclick="genSelected(this.value)" />
+                            <label for="rMale">Masculino</label>
+                        </p>
+                        <p>
+                            <input name="group2" type="radio" id="rFem" value="femenino" onclick="genSelected(this.value)"/>
+                            <label for="rFem">Femenino</label>
+                        </p>
+                    </div>
+                    <div class="input-field col s4" id="divPhoto">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn waves-effect waves-light" type="reset" name="reset" id="btnReset">Reiniciar Formulario<i class="material-icons right">delete</i></button>
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="btnSubmit">Registrar<i class="material-icons right">done</i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
